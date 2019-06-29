@@ -1,6 +1,6 @@
 .PHONY: all
 
-test: spec unit behat
+test: phpspec unit behat
 
 quality: cs-fix stan codesniffer mess-detector rector
 
@@ -8,7 +8,7 @@ unit: ## Run phpunit tests
 	vendor/bin/phpunit
 
 
-spec: ## Run phpspec
+phpspec: ## Run phpspec
 	vendor/bin/phpspec run
 
 
